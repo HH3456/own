@@ -17,7 +17,9 @@ dns:
   listen: 0.0.0.0:1053
   fake-ip-range: 28.0.0.1/8
   enhanced-mode: fake-ip
-  fake-ip-filter: ['+.*']
+  fake-ip-filter:
+    - "geosite:jd"
+    - "geosite:cn"
   respect-rules: true
   nameserver:
     - https://dns.google/dns-query
@@ -29,10 +31,8 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver-policy:
-    '+.gdtel.com': 132.121.218.164
-    '+.ctc.com': 132.121.218.164
-
-
+    +.gdtel.com: 132.121.218.164
+    +.ctc.com: 132.121.218.164
 sniffer:
   enable: true
   sniffing:
@@ -43,7 +43,7 @@ sniffer:
     - "*.google.com"
     - "*.formula1.com"
     - "*.telegram.org"
-    - "*.telesco.pe" 
+    - "*.telesco.pe"
     - "*.tdesktop.com"
     - "*.telegra.ph"
     - "*.t.me"
@@ -57,3 +57,4 @@ sniffer:
   sniff-http-ports:
     - 80
     - 8080
+
