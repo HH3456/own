@@ -1,9 +1,9 @@
 GEOSITE,google
-GEOIP,google,no-resolve
+GEOSITE,youtube
 #GEOIP,fastly,no-resolve
 GEOSITE,bing
 GEOSITE,bing@cn
 GEOSITE,openai
-GEOSITE,facebook
 #GEOIP,us,no-resolve
+GEOIP,google,no-resolve
 
