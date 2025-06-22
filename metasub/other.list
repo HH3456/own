@@ -1,0 +1,20 @@
+GEOSITE,yahoo@cn
+GEOSITE,yahoo
+GEOSITE,tiktok@!cn
+GEOSITE,tiktok
+GEOSITE,instagram
+GEOSITE,docker
+GEOSITE,github
+GEOSITE,gfw
+GEOSITE,telegram
+GEOIP,telegram,no-resolve
+DOMAIN-SUFFIX,lsposed.org
+DOMAIN-SUFFIX,missav.ws
+DOMAIN-SUFFIX,qichiyu.com
+DOMAIN-SUFFIX,lrepacks.net
+#≤‚ ‘¿‡Õ¯’æ
+DOMAIN-SUFFIX,browserleaks.com
+
+#“…À∆TELEGRAMR IP
+#IP-CIDR,149.154.0.0/16,no-resolve
+#IP-CIDR,91.108.0.0/16,no-resolve

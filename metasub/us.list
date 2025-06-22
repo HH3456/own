@@ -1,0 +1,9 @@
+GEOSITE,google
+GEOIP,google,no-resolve
+#GEOIP,fastly,no-resolve
+GEOSITE,bing
+GEOSITE,bing@cn
+GEOSITE,openai
+GEOSITE,facebook
+#GEOIP,us,no-resolve
+
