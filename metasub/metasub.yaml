@@ -12,13 +12,13 @@ custom_proxy_group=Balance_US`load-balance`(BWG)`http://www.gstatic.com/generate
 custom_proxy_group=Fallback`url-test`.*`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=ELSE`select`[]DIRECT`[]Backup_KR`.*
 
-ruleset=DNS,profiles/dns.list
-ruleset=DIRECT,profiles/lan.list
-ruleset=F1,profiles/f1.list
-ruleset=DIRECT,profiles/local.list
-ruleset=US,profiles/us.list
-ruleset=OTHER,profiles/other.list
-ruleset=CN,profiles/cn.list
+ruleset=DNS,https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/dns.list
+ruleset=DIRECT,https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/lan.list
+ruleset=F1,https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/f1.list
+ruleset=DIRECT,https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/local.list
+ruleset=US,https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/us.list
+ruleset=OTHER,https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/other.list
+ruleset=CN,https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/cn.list
 ruleset=ELSE,[]FINAL
 
 enable_rule_generator=true
