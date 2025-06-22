@@ -31,8 +31,8 @@
     },
     {
       "tag": "fakeip",
-      "address": "fakeip",  // 必须设置为 "fakeip"
-      "fakeip": {  // 新增嵌套配置块
+      "address": "fakeip",
+      "fakeip": {
         "inet4_range": "198.18.0.0/15",
         "inet6_range": "fc00::/18"
       }
