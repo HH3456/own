@@ -1,3 +1,4 @@
+
 # 本地服务清单
 DOMAIN-SUFFIX,34563456.eu.org
 DOMAIN-SUFFIX,44224422.xyz
@@ -17,6 +18,7 @@ GEOSITE,epicgames@cn
 GEOSITE,steam
 GEOSITE,steam@cn
 GEOSITE,jd
+https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/jd.list
 
 # 局域网IP
 IP-CIDR,10.0.0.0/8,no-resolve
