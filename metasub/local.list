@@ -1,7 +1,6 @@
-# ±¾µØ·şÎñÇåµ¥
+# æœ¬åœ°æœåŠ¡æ¸…å•
 DOMAIN-SUFFIX,34563456.eu.org
 DOMAIN-SUFFIX,44224422.xyz
-DOMAIN-SUFFIX,eu.org
 DOMAIN-SUFFIX,hdarea.club
 DOMAIN-SUFFIX,open.cd
 DOMAIN-SUFFIX,52pt.site
@@ -13,7 +12,7 @@ DOMAIN-SUFFIX,ctc.com
 DOMAIN-SUFFIX,gdtel.com
 DOMAIN-SUFFIX,chinatelecom.cn
 
-#Ò»Ğ©¹«¿ª·şÎñ
+#ä¸€äº›å…¬å¼€æœåŠ¡
 GEOSITE,apple
 GEOSITE,epicgames
 GEOSITE,epicgames@cn
@@ -21,7 +20,7 @@ GEOSITE,steam
 GEOSITE,steam@cn
 GEOSITE,jd
 
-#¾ÖÓòÍøIP
+#å±€åŸŸç½‘IP
 IP-CIDR,10.0.0.0/8,no-resolve
 IP-CIDR,172.20.0.0/16,no-resolve
 IP-CIDR,132.121.0.0/16,no-resolve
@@ -29,7 +28,7 @@ IP-CIDR,132.122.0.0/16,no-resolve
 IP-CIDR,132.126.0.0/16,no-resolve
 IP-CIDR,192.168.0.0/16,no-resolve
 
-#ÒÔÏÂÊÇgotv×¥°üµÄIPºÍÓòÃû
+#ä»¥ä¸‹æ˜¯gotvæŠ“åŒ…çš„IPå’ŒåŸŸå
 DOMAIN-SUFFIX,d-net.tw
 IP-CIDR,23.237.2.0/24,no-resolve
 IP-CIDR,42.200.196.0/24,no-resolve
