@@ -12,7 +12,7 @@ DOMAIN-SUFFIX,ctc.com
 DOMAIN-SUFFIX,gdtel.com
 DOMAIN-SUFFIX,chinatelecom.cn
 
-#一些公开服务
+# 一些公开服务
 GEOSITE,apple
 GEOSITE,epicgames
 GEOSITE,epicgames@cn
@@ -20,7 +20,7 @@ GEOSITE,steam
 GEOSITE,steam@cn
 GEOSITE,jd
 
-#局域网IP
+# 局域网IP
 IP-CIDR,10.0.0.0/8,no-resolve
 IP-CIDR,172.20.0.0/16,no-resolve
 IP-CIDR,132.121.0.0/16,no-resolve
@@ -28,7 +28,7 @@ IP-CIDR,132.122.0.0/16,no-resolve
 IP-CIDR,132.126.0.0/16,no-resolve
 IP-CIDR,192.168.0.0/16,no-resolve
 
-#以下是gotv抓包的IP和域名
+# 以下是gotv抓包的IP和域名
 DOMAIN-SUFFIX,d-net.tw
 IP-CIDR,23.237.2.0/24,no-resolve
 IP-CIDR,42.200.196.0/24,no-resolve
