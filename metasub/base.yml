@@ -50,6 +50,7 @@ sniffer:
     - "+.google.com"
     - "+.formula1.com"
     - "+.jd.com"
+    - "geosite:jd"
   skip-domain:
     - "*.lan"
     - "*.local"
