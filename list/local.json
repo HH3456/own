@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain": [
+        "www.163.com"
+      ],
+      "domain_suffix": [
+        "eu.org",
+        "44224422.xyz"
+      ]
+    }
+  ]
+}
