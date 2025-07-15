@@ -20,6 +20,7 @@ dns:
   fake-ip-filter:
     - "geosite:jd"
     - "geosite:cn"
+    - "+.formula1.com"
   respect-rules: true
   nameserver:
     - https://dns.google/dns-query
