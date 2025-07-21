@@ -20,6 +20,7 @@ dns:
   fake-ip-filter:
     - "geosite:jd"
     - "geosite:cn"
+    - "geosite:category-bank-cn"
     - "+.formula1.com"
   respect-rules: true
   nameserver:
@@ -52,6 +53,7 @@ sniffer:
     - "+.google.com"
     - "+.formula1.com"
     - "geosite:jd"
+    - "geosite:category-bank-cn"
   skip-domain:
     - "*.lan"
     - "*.local"
