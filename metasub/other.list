@@ -12,9 +12,9 @@ DOMAIN-SUFFIX,lsposed.org
 DOMAIN-SUFFIX,missav.ws
 DOMAIN-SUFFIX,qichiyu.com
 DOMAIN-SUFFIX,lrepacks.net
-#²âÊÔÀàÍøÕ¾
+#æµ‹è¯•ç½‘ç«™
 DOMAIN-SUFFIX,browserleaks.com
 
-#ÒÉËÆTELEGRAMR IP
-#IP-CIDR,149.154.0.0/16,no-resolve
-#IP-CIDR,91.108.0.0/16,no-resolve
+#TELEGRAMR IP
+IP-CIDR,149.154.0.0/16,no-resolve
+IP-CIDR,91.108.0.0/16,no-resolve
