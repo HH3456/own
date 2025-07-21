@@ -14,7 +14,6 @@ hosts:
 
 dns:
   enable: true
-  prefer-h3: true
   ipv6: false
   listen: 0.0.0.0:1053
   fake-ip-range: 28.0.0.1/8
@@ -22,20 +21,20 @@ dns:
   fake-ip-filter:
     - "geosite:jd"
     - "geosite:cn"
-    - "geosite:category-bank-cn"
-    - "+.formula1.com"
-    - "+.34563456.eu.org"
-    - "+.44224422.xyz"
+  respect-rules: true
   nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  proxy-server-nameserver:
     - https://dns.google/dns-query
     - https://cloudflare-dns.com/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  direct-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
   nameserver-policy:
     +.gdtel.com: 132.121.218.164
     +.ctc.com: 132.121.218.164
-    +.formula1.com: https://dns.google/dns-query
+
 
 sniffer:
   enable: true
