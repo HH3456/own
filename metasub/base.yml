@@ -14,13 +14,11 @@ hosts:
 
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
   listen: 0.0.0.0:1053
   fake-ip-range: 28.0.0.1/8
   enhanced-mode: fake-ip
-  fake-ip-filter:
-    - "geosite:jd"
-    - "geosite:cn"
+  fake-ip-filter: ['+.*']
   respect-rules: true
   nameserver:
     - https://dns.google/dns-query
@@ -54,9 +52,6 @@ sniffer:
     - "+.formula1.com"
     - "geosite:jd"
     - "geosite:category-bank-cn"
-    - "+.34563456.eu.org"
-    - "+.44224422.xyz"
   skip-domain:
     - "*.lan"
     - "*.local"
-
