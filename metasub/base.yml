@@ -32,6 +32,7 @@ dns:
   nameserver-policy:
     +.gdtel.com: 132.121.218.164
     +.ctc.com: 132.121.218.164
+    +.formula1.com: https://dns.google/dns-query
 
 
 sniffer:
