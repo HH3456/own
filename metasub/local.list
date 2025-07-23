@@ -12,12 +12,6 @@ DOMAIN-SUFFIX,soulvoice.club
 DOMAIN-SUFFIX,ctc.com
 DOMAIN-SUFFIX,gdtel.com
 DOMAIN-SUFFIX,chinatelecom.cn
-GEOSITE,apple
-GEOSITE,epicgames
-GEOSITE,epicgames@cn
-GEOSITE,steam
-GEOSITE,steam@cn
-GEOSITE,jd
 
 # 局域网IP
 IP-CIDR,10.0.0.0/8,no-resolve
