@@ -1,0 +1,58 @@
+mode: Rule
+log-level: info
+
+geox-url:
+  geoip: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+
+hosts:
+  dns.alidns.com: [223.5.5.5, 223.6.6.6, 2400:3200::1, 2400:3200:baba::1]
+  doh.pub: [1.12.12.12, 1.12.12.21, 120.53.53.53]
+  dns.google: [8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844]
+  cloudflare-dns.com: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
+
+
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  fake-ip-range: 28.0.0.1/8
+  enhanced-mode: redir-host
+  fake-ip-filter: ['+.*']
+  respect-rules: true
+  nameserver:
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  direct-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    +.gdtel.com: 132.121.218.164
+    +.ctc.com: 132.121.218.164
+    +.formula1.com: https://dns.google/dns-query
+
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  force-domain:
+    - "+.google.com"
+    - "+.formula1.com"
+    - "geosite:jd"
+    - "geosite:category-bank-cn"
+  skip-domain:
+    - "*.lan"
+    - "*.local"
