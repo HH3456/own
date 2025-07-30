@@ -32,6 +32,9 @@ dns:
   nameserver-policy:
     +.gdtel.com: 132.121.218.164
     +.ctc.com: 132.121.218.164
+    'rule-set:direct':
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
     +.formula1.com: https://dns.google/dns-query
 
 
