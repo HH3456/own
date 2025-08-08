@@ -33,6 +33,7 @@ dns:
     +.gdtel.com: 132.121.218.164
     +.ctc.com: 132.121.218.164
     +.formula1.com: https://dns.google/dns-query
+    'geosite:cn': https://dns.alidns.com/dns-query
 
 
 sniffer:
