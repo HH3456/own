@@ -1,9 +1,4 @@
-GEOSITE,google
-GEOSITE,youtube
 #GEOIP,fastly,no-resolve
-GEOSITE,bing
-GEOSITE,bing@cn
-GEOSITE,openai
 #GEOIP,us,no-resolve
 GEOIP,google,no-resolve
-
+DOMAIN-SUFFIX,fast.com
