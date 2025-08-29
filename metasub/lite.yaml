@@ -1,0 +1,31 @@
+mode: Rule
+log-level: info
+
+geox-url:
+  geoip: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+
+hosts:
+  dns.alidns.com: [223.5.5.5, 223.6.6.6]
+  doh.pub: [1.12.12.12, 1.12.12.21, 120.53.53.53]
+  dns.google: [8.8.8.8, 8.8.4.4]
+  cloudflare-dns.com: [1.1.1.1, 1.0.0.1]
+
+
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  fake-ip-range: 28.0.0.1/8
+  enhanced-mode: redir-host
+  fake-ip-filter: ['+.*']
+  respect-rules: true
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+
+  nameserver-policy:
+    +.gdtel.com: 132.121.218.164
+    +.ctc.com: 132.121.218.164
+    +.formula1.com: 8.8.8.8
+    'geosite:cn': 223.5.5.5
