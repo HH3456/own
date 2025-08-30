@@ -26,8 +26,12 @@ dns:
   nameserver-policy:
     +.gdtel.com: 132.121.218.164
     +.ctc.com: 132.121.218.164
+    'rule-set:OTHER,US,F1' :
+      - 8.8.8.8
+      - 1.1.1.1
     +.formula1.com: 8.8.8.8
     'geosite:cn': 223.5.5.5
+    
   geosite:
     path: ./geosite.db
     download:
