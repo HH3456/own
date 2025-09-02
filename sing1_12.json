@@ -220,7 +220,7 @@
         "outbound": "direct"
       },
       {
-        "rule_set": ["geosite-gfw","geosite-youtube", "geoip-google", "geosite-google", "geosite-ai!cn","geoip-telegram", "geosite-telegram","geosite-github","geosite-tiktok","geosite-spotify"],
+        "rule_set": ["geosite-gfw","geosite-youtube", "geoip-google", "geosite-google", "geosite-ai!cn","geoip-telegram", "geosite-telegram","geosite-github","geosite-tiktok"],
         "outbound": "Google"
       },
       {
