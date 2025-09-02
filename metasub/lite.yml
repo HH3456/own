@@ -1,7 +1,7 @@
 mode: Rule
 log-level: info
 geox-url:
-  geoip: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
+  geoip: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
   geosite: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
 hosts:
   dns.alidns.com: [223.5.5.5, 223.6.6.6]
