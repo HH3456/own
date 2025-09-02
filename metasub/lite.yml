@@ -34,10 +34,10 @@ dns:
   geosite:
     path: ./geosite.db
     download:
-      url: https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
+      url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
       interval: 86400
   geoip:
     path: ./geoip.db
     download:
-      url: https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat
+      url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
       interval: 86400
