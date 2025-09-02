@@ -78,8 +78,10 @@
       "tag":"Google",
       "type":"selector",
       "outbounds":[
-        "America",
-        "Others"
+        "{all}"
+      ],
+      "filter":[
+        {"action":"exclude","keywords":["🇺🇸|BWG|US|us|美国|美"]}
       ]
     },
     {
