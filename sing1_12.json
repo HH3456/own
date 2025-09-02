@@ -228,16 +228,12 @@
         "outbound": "BiliBili"
       },
       {
-        "rule_set": ["geoip-apple", "geosite-apple", "geosite-amazon"],
+        "rule_set": ["geoip-apple", "geosite-apple"],
         "outbound": "Apple"
       },
       {
         "rule_set": "geosite-microsoft",
         "outbound": "Microsoft"
-      },
-      {
-        "rule_set": ["geosite-category-games", "geosite-dmm"],
-        "outbound": "Games"
       },
       {
         "rule_set": "geosite-geolocation-!cn",
