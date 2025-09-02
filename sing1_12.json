@@ -362,10 +362,6 @@
         "outbound": "BiliBili"
       },
       {
-        "rule_set": ,
-        "outbound": "TikTok"
-      },
-      {
         "rule_set": ["geoip-apple", "geosite-apple", "geosite-amazon"],
         "outbound": "Apple"
       },
