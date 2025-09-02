@@ -78,112 +78,6 @@
       "tag":"Google",
       "type":"selector",
       "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag":"Telegram",
-      "type":"selector",
-      "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag":"Twitter",
-      "type":"selector",
-      "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag":"Facebook",
-      "type":"selector",
-      "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag":"BiliBili",
-      "type":"selector",
-      "outbounds":[
-        "direct",
-        "HongKong",
-        "TaiWan"
-      ]
-    },
-    {
-      "tag":"Bahamut",
-      "type":"selector",
-      "outbounds":[
-        "TaiWan",
-        "Proxy"
-      ]
-    },
-    {
-      "tag":"Spotify",
-      "type":"selector",
-      "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ],
-      "default": "America"
-    },
-    {
-      "tag":"TikTok",
-      "type":"selector",
-      "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America"
-      ],
-      "default": "Japan"
-    },
-    {
-      "tag":"Netflix",
-      "type":"selector",
-      "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag":"Disney+",
-      "type":"selector",
-      "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
         "America",
         "Others"
       ]
@@ -193,10 +87,6 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
         "America",
         "Others"
       ]
@@ -206,10 +96,6 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
         "America",
         "Others"
       ]
@@ -219,22 +105,6 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag":"Streaming",
-      "type":"selector",
-      "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
         "America",
         "Others"
       ]
@@ -243,10 +113,6 @@
       "tag":"Global",
       "type":"selector",
       "outbounds":[ 
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
         "America",
         "Others",
         "direct"
