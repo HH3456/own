@@ -24,12 +24,15 @@ dns:
     - 114.114.114.114
 
   nameserver-policy:
-    +.gdtel.com: 132.121.218.164
-    +.ctc.com: 132.121.218.164
+    "+.gdtel.com": 132.121.218.164
+    "+.ctc.com": 132.121.218.164
+    rule-set:formula1:
+      - 8.8.8.8
+      - 1.1.1.1
     geosite:gfw,github,google,youtube:
       - 8.8.8.8
       - 1.1.1.1
-    +.formula1.com: 8.8.8.8
+    "+.formula1.com": 8.8.8.8
     geosite:cn: 223.5.5.5
   geosite:
     path: ./geosite.dat
@@ -63,3 +66,13 @@ sniffer:
   skip-domain:
     - "*.lan"
     - "*.local"
+
+#自定义DNS使用的rule-set    
+rule-providers:
+  formula1:
+    type: http
+    interval: 1800
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/f1.list
+    path: ./ruleset/formula1.yaml
