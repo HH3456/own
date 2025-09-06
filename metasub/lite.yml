@@ -26,13 +26,12 @@ dns:
   nameserver-policy:
     "+.gdtel.com": 132.121.218.164
     "+.ctc.com": 132.121.218.164
-    rule-set:formula1:
+    rule-set:formula1,other:
       - 8.8.8.8
       - 1.1.1.1
-    geosite:gfw,github,google,youtube:
+    geosite:gfw,github,google,youtube,bing,category-android-app-download,tiktok,yahoo,yahoo@cn:
       - 8.8.8.8
       - 1.1.1.1
-    "+.formula1.com": 8.8.8.8
     geosite:cn: 223.5.5.5
   geosite:
     path: ./geosite.dat
@@ -76,3 +75,11 @@ rule-providers:
     format: yaml
     url: https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/f1.list
     path: ./ruleset/formula1.yaml
+  other:
+    formula1:
+    type: http
+    interval: 1800
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/other.list
+    path: ./ruleset/other.yaml
