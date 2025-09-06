@@ -31,7 +31,7 @@ dns:
     rule-set:local:
       - 223.5.5.5
       - 114.114.114.114
-    rule-set:formula1,other:
+    rule-set:formula1,other,us:
       - 8.8.8.8
       - 1.1.1.1
     geosite:gfw,github,google,youtube,bing,category-android-app-download,tiktok,yahoo,yahoo@cn:
@@ -93,5 +93,12 @@ rule-providers:
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/local.list
+    path: ./ruleset/other.yaml
+  us:
+    type: http
+    interval: 1800
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/us.list
     path: ./ruleset/other.yaml
 
