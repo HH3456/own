@@ -24,8 +24,13 @@ dns:
     - 114.114.114.114
 
   nameserver-policy:
-    "+.gdtel.com": 132.121.218.164
-    "+.ctc.com": 132.121.218.164
+    "+.gdtel.com": 
+      - 132.121.218.164
+    "+.ctc.com": 
+      - 132.121.218.164
+    rule-set:local:
+      - 223.5.5.5
+      - 114.114.114.114
     rule-set:formula1,other:
       - 8.8.8.8
       - 1.1.1.1
@@ -82,3 +87,11 @@ rule-providers:
     format: yaml
     url: https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/other.list
     path: ./ruleset/other.yaml
+  local:
+    type: http
+    interval: 1800
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/local.list
+    path: ./ruleset/other.yaml
+
