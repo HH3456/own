@@ -76,7 +76,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/f1.list
     path: ./ruleset/formula1.yaml
   other:
-    formula1:
     type: http
     interval: 1800
     behavior: classical
