@@ -2,3 +2,4 @@
 #GEOIP,us,no-resolve
 GEOIP,google,no-resolve
 DOMAIN-SUFFIX,fast.com
+DOMAIN,www.cloudflare.com
