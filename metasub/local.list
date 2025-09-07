@@ -26,11 +26,5 @@ IP-CIDR,192.168.0.0/16,no-resolve
 
 # 以下是gotv抓包的IP和域名
 DOMAIN-SUFFIX,d-net.tw
-IP-CIDR,23.237.2.0/24,no-resolve
-IP-CIDR,42.200.196.0/24,no-resolve
-IP-CIDR,64.62.198.0/24,no-resolve
-IP-CIDR,114.240.13.0/24,no-resolve
-IP-CIDR,119.29.29.0/24,no-resolve
-IP-CIDR,122.228.236.0/24,no-resolve
-IP-CIDR,192.243.121.0/24,no-resolve
-IP-CIDR,183.197.151.0/24,no-resolve
+IP-CIDR,65.49.80.0/24,no-reslove
+IP-CIDR,64.63.198.0/24,no-reslove
