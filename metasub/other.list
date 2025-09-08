@@ -4,12 +4,9 @@ DOMAIN-SUFFIX,qichiyu.com
 DOMAIN-SUFFIX,metacubex.one
 DOMAIN-SUFFIX,lrepacks.net
 DOMAIN-SUFFIX,debian.org
+DOMAIN-SUFFIX,f1-dash.com #F1数据网站
 #WWZ
 DOMAIN-SUFFIX,saber.games
 DOMAIN-SUFFIX,wwzgame.com
 #测试网站
 DOMAIN-SUFFIX,browserleaks.com
-
-#TELEGRAMR IP
-IP-CIDR,149.154.0.0/16,no-resolve
-IP-CIDR,91.108.0.0/16,no-resolve
