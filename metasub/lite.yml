@@ -38,16 +38,16 @@ dns:
       - 8.8.8.8
       - 1.1.1.1
     geosite:cn: 223.5.5.5
-  geosite:
-    path: ./geosite.dat
-    download:
-      url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
-      interval: 86400
-  geoip:
-    path: ./geoip.dat
-    download:
-      url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
-      interval: 86400
+#  geosite:
+#    path: ./geosite.dat
+#    download:
+#      url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
+#      interval: 86400
+#  geoip:
+#    path: ./geoip.dat
+#    download:
+#      url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
+#      interval: 86400
 
 sniffer:
   enable: true
