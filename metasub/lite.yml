@@ -93,12 +93,12 @@ rule-providers:
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/local.list
-    path: ./ruleset/other.yaml
+    path: ./ruleset/local.yaml
   us:
     type: http
     interval: 1800
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/us.list
-    path: ./ruleset/other.yaml
+    path: ./ruleset/us.yaml
 
