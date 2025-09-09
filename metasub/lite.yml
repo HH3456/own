@@ -106,7 +106,7 @@ rule-providers:
     interval: 1800
     behavior: ipcidr
     format: mrs
-    url: http://subcon.44224422.xyz:5547/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo-lite/geoip/cn.mrs
     path: ./ruleset/cn.mrs
   
 
