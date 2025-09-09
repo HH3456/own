@@ -101,4 +101,12 @@ rule-providers:
     format: yaml
     url: http://subcon.44224422.xyz:5547/https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/us.list
     path: ./ruleset/us.yaml
+  geoip-cn
+    type: http
+    interval: 1800
+    behavior: classical
+    format: mrs
+    url: http://subcon.44224422.xyz:5547/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs
+    path: ./ruleset/cn.mrs
+  
 
