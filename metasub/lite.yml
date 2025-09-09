@@ -78,27 +78,27 @@ rule-providers:
     interval: 1800
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/f1.list
+    url: http://subcon.44224422.xyz:5547/https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/f1.list
     path: ./ruleset/formula1.yaml
   other:
     type: http
     interval: 1800
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/other.list
+    url: http://subcon.44224422.xyz:5547/https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/other.list
     path: ./ruleset/other.yaml
   local:
     type: http
     interval: 1800
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/local.list
+    url: http://subcon.44224422.xyz:5547/https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/local.list
     path: ./ruleset/local.yaml
   us:
     type: http
     interval: 1800
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/us.list
+    url: http://subcon.44224422.xyz:5547/https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/us.list
     path: ./ruleset/us.yaml
 
