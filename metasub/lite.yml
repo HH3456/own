@@ -34,7 +34,7 @@ dns:
     rule-set:formula1,other,us:
       - 8.8.8.8
       - 1.1.1.1
-    geosite:gfw,github,google,youtube,bing,bing@cn,tiktok,yahoo,yahoo@cn,category-ai-!cn,category-android-app-download:
+    geosite:gfw,github,google,youtube,microsoft,bing,bing@cn,tiktok,yahoo,yahoo@cn,category-ai-!cn,category-android-app-download:
       - https://dns.google/dns-query
       - https://cloudflare-dns.com/dns-query
       - 8.8.8.8
