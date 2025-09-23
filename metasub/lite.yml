@@ -34,7 +34,7 @@ dns:
     rule-set:formula1,other,us:
       - 8.8.8.8
       - 1.1.1.1
-    geosite:gfw,github,google,youtube,bing,category-android-app-download,tiktok,yahoo,yahoo@cn:
+    geosite:gfw,github,google,youtube,bing,bing@cn,tiktok,yahoo,yahoo@cn,category-ai-!cn,category-android-app-download:
       - 8.8.8.8
       - 1.1.1.1
     geosite:cn: 223.5.5.5
