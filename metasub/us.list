@@ -1,6 +1,3 @@
-#GEOIP,fastly,no-resolve
-#GEOIP,us,no-resolve
-#GEOIP,google,no-resolve
 DOMAIN-SUFFIX,fast.com
 DOMAIN-SUFFIX,f1-dash.com
-DOMAIN,www.cloudflare.com
+
