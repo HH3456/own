@@ -35,6 +35,8 @@ dns:
       - 8.8.8.8
       - 1.1.1.1
     geosite:gfw,github,google,youtube,bing,bing@cn,tiktok,yahoo,yahoo@cn,category-ai-!cn,category-android-app-download:
+      - https://dns.google/dns-query
+      - https://cloudflare-dns.com/dns-query
       - 8.8.8.8
       - 1.1.1.1
     geosite:cn: 223.5.5.5
