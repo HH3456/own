@@ -43,7 +43,7 @@ dns:
   geosite:
     path: ./geosite.dat
     download:
-      url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
+      url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
       interval: 86400
   geoip:
     path: ./geoip.dat
