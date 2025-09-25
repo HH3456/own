@@ -71,6 +71,9 @@ sniffer:
   force-domain:
     - "+.google.com"
     - "+.formula1.com"
+    - "+.hevciptv.com"
+    - "+.d-net.tw"
+    - "+.cococut.net"
     - "geosite:jd"
     - "geosite:category-bank-cn"
   skip-domain:
