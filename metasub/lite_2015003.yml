@@ -1,65 +1,54 @@
-mode: Rule
-log-level: info
-#geox-url:
-#  geoip: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
-#  geosite: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
-hosts:
-  dns.alidns.com: [223.5.5.5, 223.6.6.6]
-  doh.pub: [1.12.12.12, 1.12.12.21, 120.53.53.53]
-  dns.google: [8.8.8.8, 8.8.4.4]
-  cloudflare-dns.com: [1.1.1.1, 1.0.0.1]
-dns:
-  enable: true
-  cache-algorithm: arc
-  prefer-h3: false
-  use-hosts: true
-  use-system-hosts: true
-  respect-rules: true
-  listen: 0.0.0.0:1053
-  ipv6: false
-  fake-ip-range: 28.0.0.1/8
-  enhanced-mode: redir-host
-  fake-ip-filter: [+.*]
-  nameserver:
-    - 223.5.5.5
-    - 114.114.114.114
-  proxy-server-nameserver:
-    - https://dns.google/dns-query
-    - https://cloudflare-dns.com/dns-query
+# 必读！！！
+# 注意规则在满足自己需求情况下，尽量做到精简，不要过度复杂，以免影响性能。
+# 跑裸核用户请自行去掉下方控制面板模块的注释。
+# 机场订阅
+proxy-providers:
+  Airport1:
+    url: "机场订阅填到这里，两端引号不要去掉，不要填写到下方链接里去！！"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: 直连
 
-  nameserver-policy:
-    "+.gdtel.com": 
-      - 132.121.218.164
-    "+.ctc.com": 
-      - 132.121.218.164
-    rule-set:local:
-      - 202.96.128.86
-      - 114.114.114.114
-    rule-set:formula1,other,us:
-      - 8.8.8.8
-      - 1.1.1.1
-    geosite:gfw,github,google,youtube,microsoft,bing,bing@cn,tiktok,yahoo,yahoo@cn,category-ai-!cn,category-android-app-download:
-      - https://dns.google/dns-query
-      - https://cloudflare-dns.com/dns-query
-      - 8.8.8.8
-      - 1.1.1.1
-    geosite:cn: 223.5.5.5
-  geosite:
-    path: ./geosite.dat
-    download:
-      url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
-      interval: 86400
-  geoip:
-    path: ./geoip.dat
-    download:
-      url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
-      interval: 86400
+# 节点信息
+proxies:
+  - {name: 直连, type: direct}
 
+# 全局配置 
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+bind-address: "*"
+ipv6: false
+unified-delay: true
+tcp-concurrent: true
+# interface-name: enp6s18
+log-level: warning
+find-process-mode: 'off'
+global-client-fingerprint: chrome
+keep-alive-idle: 600
+keep-alive-interval: 15
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+# 为防止使用插件朋友遇到面板问题，我注释掉了此模块。
+# 跑裸核朋友自行删除注释即可，使用nikki仅内核的ui路径改为/etc/nikki/run/ui
+#external-controller: 0.0.0.0:9090
+#secret: ""
+#external-ui: "/etc/mihomo/ui"
+#external-ui-name: zashboard
+#external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
+
+# 嗅探
 sniffer:
   enable: true
-  force-dns-mapping: true
-  parse-pure-ip: true
-  override-destination: true
   sniff:
     HTTP:
       ports: [80, 8080-8880]
@@ -69,53 +58,43 @@ sniffer:
     QUIC:
       ports: [443, 8443]
   force-domain:
-    - "+.google.com"
-    - "+.formula1.com"
-    - "+.hevciptv.com"
-    - "+.d-net.tw"
-    - "+.cococut.net"
-    - "geosite:jd"
-    - "geosite:category-bank-cn"
+    - "+.v2ex.com"
   skip-domain:
-    - "*.lan"
-    - "*.local"
+    - "+.baidu.com"
 
-#自定义DNS使用的rule-set    
-rule-providers:
-  formula1:
-    type: http
-    interval: 1800
-    behavior: classical
-    format: yaml
-    url: http://subcon.44224422.xyz:5547/https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/f1.list
-    path: ./ruleset/formula1.yaml
-  other:
-    type: http
-    interval: 1800
-    behavior: classical
-    format: yaml
-    url: http://subcon.44224422.xyz:5547/https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/other.list
-    path: ./ruleset/other.yaml
-  local:
-    type: http
-    interval: 1800
-    behavior: classical
-    format: yaml
-    url: http://subcon.44224422.xyz:5547/https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/local.list
-    path: ./ruleset/local.yaml
-  us:
-    type: http
-    interval: 1800
-    behavior: classical
-    format: yaml
-    url: http://subcon.44224422.xyz:5547/https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/us.list
-    path: ./ruleset/us.yaml
-  geoip-cn:
-    type: http
-    interval: 1800
-    behavior: ipcidr
-    format: mrs
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo-lite/geoip/cn.mrs
-    path: ./ruleset/cn.mrs
-  
+# 入站  
+tun:
+  enable: true
+  # system/gvisor/mixed
+  stack: mixed
+  dns-hijack: ["any:53", "tcp://any:53"]
+  #使用nikki，混入全部不修改的情况，开启接口指定为nikki
+  #使用仅内核自行修改下面三项为true
+  #device: nikki
+  auto-route: false
+  auto-redirect: false
+  auto-detect-interface: false
 
+# DNS模块
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: false
+  respect-rules: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 28.0.0.1/8
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - "rule-set:private_domain,cn_domain"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "time.*.com"
+    - "+.market.xiaomi.com"
+  default-nameserver:
+    - 223.5.5.5
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query
+  # namesever尽量用运营商提供的DNS
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
