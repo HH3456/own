@@ -14,20 +14,10 @@ DOMAIN-SUFFIX,ctc.com
 DOMAIN-SUFFIX,gdtel.com
 DOMAIN-SUFFIX,chinatelecom.cn
 
-# 局域网IP
-IP-CIDR,10.0.0.0/8,no-resolve
-IP-CIDR,172.20.0.0/16,no-resolve
-IP-CIDR,132.121.0.0/16,no-resolve
-IP-CIDR,132.122.0.0/16,no-resolve
-IP-CIDR,132.123.0.0/16,no-resolve
-IP-CIDR,132.124.0.0/16,no-resolve
-IP-CIDR,132.126.0.0/16,no-resolve
-IP-CIDR,192.168.0.0/16,no-resolve
-
 # 以下是gotv抓包的IP和域名
-DOMAIN-SUFFIX,d-net.tw
-DOMAIN-SUFFIX,hevciptv.com
-DOMAIN-SUFFIX,cococut.net
-IP-CIDR,23.237.2.0/24,no-reslove
-IP-CIDR,65.49.80.0/24,no-reslove
-IP-CIDR,64.63.198.0/24,no-reslove
+# DOMAIN-SUFFIX,d-net.tw
+# DOMAIN-SUFFIX,hevciptv.com
+# DOMAIN-SUFFIX,cococut.net
+# IP-CIDR,23.237.2.0/24,no-reslove
+# IP-CIDR,65.49.80.0/24,no-reslove
+# IP-CIDR,64.63.198.0/24,no-reslove
