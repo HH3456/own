@@ -1,14 +1,21 @@
 #以下对端不使用proxy
 DOMAIN-SUFFIX,local
-IP-CIDR,192.168.0.0/16,no-resolve
 IP-CIDR,10.0.0.0/8,no-resolve
-IP-CIDR,172.16.0.0/12,no-resolve
-IP-CIDR,127.0.0.0/8,no-resolve
 IP-CIDR,100.64.0.0/10,no-resolve
+IP-CIDR,127.0.0.0/8,no-resolve
+IP-CIDR,132.121.0.0/16,no-resolve
+IP-CIDR,132.122.0.0/16,no-resolve
+IP-CIDR,132.123.0.0/16,no-resolve
+IP-CIDR,132.124.0.0/16,no-resolve
+IP-CIDR,132.125.0.0/16,no-resolve
+IP-CIDR,132.126.0.0/16,no-resolve
+IP-CIDR,172.16.0.0/12,no-resolve
+IP-CIDR,192.168.0.0/16,no-resolve
 IP-CIDR6,::1/128,no-resolve
 IP-CIDR6,fc00::/7,no-resolve
 IP-CIDR6,fe80::/10,no-resolve
 IP-CIDR6,fd00::/8,no-resolve
+
 
 #以下不使用proxy
 SRC-IP-CIDR,192.168.70.200/32
