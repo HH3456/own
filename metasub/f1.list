@@ -10,4 +10,5 @@ DOMAIN-SUFFIX,bitmovin.com
 DOMAIN-SUFFIX,doubleclick.net
 DOMAIN-SUFFIX,akamaized.net
 DOMAIN-SUFFIX,cloudfront.net
+# F1第三方数据看板
 DOMAIN-SUFFIX,f1-dash.com
