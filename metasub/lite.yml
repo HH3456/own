@@ -1,34 +1,13 @@
-# 必读！！！
-# 注意规则在满足自己需求情况下，尽量做到精简，不要过度复杂，以免影响性能。
-# 跑裸核用户请自行去掉下方控制面板模块的注释。
-# 机场订阅
-proxy-providers:
-  Airport1:
-    url: "机场订阅填到这里，两端引号不要去掉，不要填写到下方链接里去！！"
-    type: http
-    interval: 86400
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-    proxy: 直连
-
-# 节点信息
-proxies:
-  - {name: 直连, type: direct}
-
-# 全局配置 
-port: 7890
-socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-tproxy-port: 7894
+port: 8080
+socks-port: 1080
+redir-port: 7891
+mixed-port: 7890
+tproxy-port: 7892
 allow-lan: true
 bind-address: "*"
 ipv6: false
 unified-delay: true
 tcp-concurrent: true
-# interface-name: enp6s18
 log-level: warning
 find-process-mode: 'off'
 global-client-fingerprint: chrome
@@ -37,16 +16,6 @@ keep-alive-interval: 15
 profile:
   store-selected: true
   store-fake-ip: true
-
-# 为防止使用插件朋友遇到面板问题，我注释掉了此模块。
-# 跑裸核朋友自行删除注释即可，使用nikki仅内核的ui路径改为/etc/nikki/run/ui
-#external-controller: 0.0.0.0:9090
-#secret: ""
-#external-ui: "/etc/mihomo/ui"
-#external-ui-name: zashboard
-#external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
-
-# 嗅探
 sniffer:
   enable: true
   sniff:
@@ -61,28 +30,22 @@ sniffer:
     - "+.v2ex.com"
   skip-domain:
     - "+.baidu.com"
-
-# 入站  
+  force-dns-mapping: true
 tun:
   enable: true
-  # system/gvisor/mixed
   stack: mixed
   dns-hijack: ["any:53", "tcp://any:53"]
-  #使用nikki，混入全部不修改的情况，开启接口指定为nikki
-  #使用仅内核自行修改下面三项为true
-  #device: nikki
   auto-route: false
   auto-redirect: false
   auto-detect-interface: false
-
-# DNS模块
+  device: nikki
 dns:
   enable: true
-  listen: 0.0.0.0:1053
+  listen: '[::]:1053'
   ipv6: false
   respect-rules: true
-  enhanced-mode: fake-ip
-  fake-ip-range: 28.0.0.1/8
+  enhanced-mode: redir-host
+  fake-ip-range: 198.18.0.1/16
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - "rule-set:private_domain,cn_domain"
@@ -94,7 +57,8 @@ dns:
     - 223.5.5.5
   proxy-server-nameserver:
     - https://223.5.5.5/dns-query
-  # namesever尽量用运营商提供的DNS
   nameserver:
+    - 202.96.128.86
     - 223.5.5.5
     - 119.29.29.29
+  use-system-hosts: true
