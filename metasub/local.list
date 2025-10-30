@@ -17,5 +17,5 @@ DOMAIN-SUFFIX,chinatelecom.cn
 # 以下是gotv抓包的IP和域名
 DOMAIN-SUFFIX,d-net.tw
 DOMAIN-SUFFIX,hevciptv.com
-DOMAIN-SUFFIX,cococut.net
+IP-CIDR,23.237.2.0/16,no-resolve
 
