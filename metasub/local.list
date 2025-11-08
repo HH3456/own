@@ -13,7 +13,7 @@ DOMAIN-SUFFIX,btschool.club
 DOMAIN-SUFFIX,ctc.com
 DOMAIN-SUFFIX,gdtel.com
 DOMAIN-SUFFIX,chinatelecom.cn
-DOMAIN-SUFFIX,googleapis.cn
+#DOMAIN-SUFFIX,googleapis.cn
 
 # 以下是gotv抓包的IP和域名
 DOMAIN-SUFFIX,d-net.tw
