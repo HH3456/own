@@ -9,7 +9,8 @@ IP-CIDR,132.123.0.0/16,no-resolve
 IP-CIDR,132.124.0.0/16,no-resolve
 IP-CIDR,132.125.0.0/16,no-resolve
 IP-CIDR,132.126.0.0/16,no-resolve
-IP-CIDR,172.16.0.0/12,no-resolve
+IP-CIDR,172.16.0.0/16,no-resolve
+IP-CIDR,172.20.0.0/16,no-resolve
 IP-CIDR,192.168.0.0/16,no-resolve
 IP-CIDR6,::1/128,no-resolve
 IP-CIDR6,fc00::/7,no-resolve
