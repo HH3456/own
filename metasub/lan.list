@@ -1,3 +1,7 @@
+#端口限制
+DST-PORT,10000-65535  #匹配数据目标端口(直连)（114-514/810-1919,65530）
+
+
 #以下对端不使用proxy
 DOMAIN-SUFFIX,local
 IP-CIDR,10.0.0.0/8,no-resolve
