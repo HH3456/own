@@ -15,6 +15,16 @@ DOMAIN-SUFFIX,gdtel.com
 DOMAIN-SUFFIX,chinatelecom.cn
 #DOMAIN-SUFFIX,googleapis.cn
 
+#FCM域名
+DOMAIN,alt1-mtalk.google.com
+DOMAIN,alt2-mtalk.google.com
+DOMAIN,alt3-mtalk.google.com
+DOMAIN,alt4-mtalk.google.com
+DOMAIN,alt5-mtalk.google.com
+DOMAIN,alt6-mtalk.google.com
+DOMAIN,alt7-mtalk.google.com
+DOMAIN,alt8-mtalk.google.com
+
 # 以下是gotv抓包的IP和域名
 DOMAIN-SUFFIX,d-net.tw
 DOMAIN-SUFFIX,hevciptv.com
