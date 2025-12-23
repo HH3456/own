@@ -16,6 +16,10 @@ DOMAIN-SUFFIX,ctc.com
 DOMAIN-SUFFIX,gdtel.com
 DOMAIN-SUFFIX,chinatelecom.cn
 
+#微软相关
+DOMAIN-SUFFIX,microsoft.com
+DOMAIN-SUFFIX,windowsupdate.com
+DOMAIN-SUFFIX,outlook.com
 
 #FCM域名
 DOMAIN,alt1-mtalk.google.com
