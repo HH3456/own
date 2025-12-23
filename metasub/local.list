@@ -27,11 +27,21 @@ DOMAIN,alt6-mtalk.google.com
 DOMAIN,alt7-mtalk.google.com
 DOMAIN,alt8-mtalk.google.com
 
+#GOOGLE国内服务
+DOMAIN,dl.google.com
+DOMAIN,dl.l.google.com
+DOMAIN,update.googleapis.com
+DOMAIN-SUFFIX,googleapis.cn
+DOMAIN-SUFFIX,fonts.googleapis.com
+DOMAIN-SUFFIX,fonts.gstatic.com
+DOMAIN-KEYWORD,translate.googleapis
+
 # IP Testing
 IP-CIDR,1.0.0.2/32,Proxy,no-resolve
 IP-CIDR6,2606:4700:4700::1111/128,Proxy,no-resolve
-DOMAIN,4.ipcheck.ing,DIRECT
-DOMAIN,6.ipcheck.ing,DIRECT
+DOMAIN,4.ipcheck.ing
+DOMAIN,6.ipcheck.ing
+
 # Rule Testing
 DOMAIN,ptest-1.ipcheck.ing,Proxy1
 DOMAIN,ptest-2.ipcheck.ing,Proxy2
