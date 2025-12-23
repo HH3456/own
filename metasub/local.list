@@ -15,7 +15,7 @@ DOMAIN-SUFFIX,leijing1.com
 DOMAIN-SUFFIX,ctc.com
 DOMAIN-SUFFIX,gdtel.com
 DOMAIN-SUFFIX,chinatelecom.cn
-#DOMAIN-SUFFIX,googleapis.cn
+
 
 #FCM域名
 DOMAIN,alt1-mtalk.google.com
@@ -27,14 +27,6 @@ DOMAIN,alt6-mtalk.google.com
 DOMAIN,alt7-mtalk.google.com
 DOMAIN,alt8-mtalk.google.com
 
-#GOOGLE国内服务
-DOMAIN,dl.google.com
-DOMAIN,dl.l.google.com
-DOMAIN,update.googleapis.com
-DOMAIN-SUFFIX,googleapis.cn
-DOMAIN-SUFFIX,fonts.googleapis.com
-DOMAIN-SUFFIX,fonts.gstatic.com
-DOMAIN-KEYWORD,translate.googleapis
 
 # IP Testing
 IP-CIDR,1.0.0.2/32,Proxy,no-resolve
