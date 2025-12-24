@@ -17,7 +17,7 @@ DOMAIN-SUFFIX,gdtel.com
 DOMAIN-SUFFIX,chinatelecom.cn
 
 #小米想着
-DOMAIN-SUFFIX,mijia.tech
+DOMAIN,core.api.mijia.tech
 
 #微软相关
 DOMAIN-SUFFIX,microsoft.com
