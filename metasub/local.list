@@ -33,8 +33,6 @@ DOMAIN,alt8-mtalk.google.com
 
 
 # IP Testing
-IP-CIDR,1.0.0.2/32,Proxy,no-resolve
-IP-CIDR6,2606:4700:4700::1111/128,Proxy,no-resolve
 DOMAIN,4.ipcheck.ing
 DOMAIN,6.ipcheck.ing
 
@@ -52,5 +50,4 @@ DOMAIN,ptest-8.ipcheck.ing,Proxy8
 DOMAIN-SUFFIX,d-net.tw
 DOMAIN-SUFFIX,tvrohd.cc
 DOMAIN-SUFFIX,hevciptv.com
-IP-CIDR,23.237.2.0/16,no-resolve
 
