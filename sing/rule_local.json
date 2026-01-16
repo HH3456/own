@@ -2,7 +2,6 @@
   "version": 1,
   "rules": [
     {
-      "//": "--- 本地服务、PT站、NAS及运营商 ---",
       "domain_suffix": [
         "34563456.eu.org",
         "44224422.xyz",
@@ -22,13 +21,11 @@
       ]
     },
     {
-      "//": "--- 小米智能家居 ---",
       "domain": [
         "core.api.mijia.tech"
       ]
     },
     {
-      "//": "--- 微软 (中国/直连优化) ---",
       "domain_suffix": [
         "microsoft.com",
         "windowsupdate.com",
@@ -42,7 +39,6 @@
       ]
     },
     {
-      "//": "--- Apple (CDN与中国服务) ---",
       "domain_suffix": [
         "apple.com",
         "apple.com.cn",
@@ -54,15 +50,12 @@
       ]
     },
     {
-      "//": "--- Google (仅限中国可用部分) ---",
       "domain_suffix": [
         "google.cn",
         "265.com"
       ]
     },
     {
-      "//": "--- FCM 推送 (MTalk) ---",
-      "//": "注意：如果您的网络环境无法直连谷歌IP，这部分可能导致推送超时",
       "domain": [
         "mtalk.google.com",
         "alt1-mtalk.google.com",
@@ -76,7 +69,6 @@
       ]
     },
     {
-      "//": "--- GOTV / IPTV 直播源 ---",
       "domain_suffix": [
         "d-net.tw",
         "tvrohd.cc",
@@ -84,7 +76,6 @@
       ]
     },
     {
-      "//": "--- 网络测试工具 (IPCheck) ---",
       "domain": [
         "4.ipcheck.ing",
         "6.ipcheck.ing",
