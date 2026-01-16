@@ -1,0 +1,152 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "address": "8.8.8.8",
+        "detour": "优选节点"
+      },
+      {
+        "tag": "local",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "local"
+      },
+      {
+        "rule_set": ["geosite-cn"],
+        "server": "local"
+      },
+      {
+        "clash_mode": "direct",
+        "server": "local"
+      },
+      {
+        "clash_mode": "global",
+        "server": "google"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080,
+      "sniff": true
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "优选节点",
+      "type": "urltest",
+      "outbounds": [],
+      "providers": ["my-provider"],
+      "includes": ["(?i)(BWG|DC)"],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
+    },
+    {
+      "tag": "全部节点",
+      "type": "selector",
+      "outbounds": [],
+      "providers": ["my-provider"]
+    },
+    {
+      "tag": "杂七杂八",
+      "type": "selector",
+      "outbounds": [],
+      "providers": ["my-provider"],
+      "excludes": ["(?i)(BWG|DC)"]
+    },
+    {
+      "tag": "GFW流量",
+      "type": "selector",
+      "outbounds": ["优选节点", "全部节点", "杂七杂八"]
+    },
+    {
+      "tag": "直通节点",
+      "type": "selector",
+      "outbounds": ["direct"]
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    }
+  ],
+  "outbound_providers": [
+    {
+      "tag": "my-provider",
+      "type": "http",
+      "download_url": "你的订阅链接",
+      "path": "./proxy_provider.json",
+      "download_interval": "24h",
+      "download_ua": "sing-box",
+      "healthcheck_url": "http://www.gstatic.com/generate_204",
+      "healthcheck_interval": "10m"
+    }
+  ],
+  "route": {
+    "rule_set": [
+      {
+        "tag": "geosite-gfw",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-gfw.srs",
+        "download_detour": "优选节点"
+      },
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "直通节点"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "直通节点"
+      }
+    ],
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "rule_set": ["geosite-cn", "geoip-cn"],
+        "outbound": "直通节点"
+      },
+      {
+        "rule_set": ["geosite-gfw"],
+        "outbound": "GFW流量"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "直通节点"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "全部节点"
+  }
+}
