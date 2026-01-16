@@ -7,13 +7,17 @@
     "servers": [
       {
         "tag": "google",
-        "address": "8.8.8.8",
+        "address": "tls://8.8.8.8",
         "detour": "优选节点"
       },
       {
         "tag": "local",
-        "address": "223.5.5.5",
+        "address": "udp://223.5.5.5",
         "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
       }
     ],
     "rules": [
@@ -26,14 +30,11 @@
         "server": "local"
       },
       {
-        "clash_mode": "direct",
-        "server": "local"
-      },
-      {
-        "clash_mode": "global",
+        "rule_set": ["geosite-gfw"],
         "server": "google"
       }
     ],
+    "final": "google",
     "strategy": "ipv4_only"
   },
   "inbounds": [
