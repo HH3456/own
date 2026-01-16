@@ -6,35 +6,35 @@
   "dns": {
     "servers": [
       {
-        "tag": "google",
+        "tag": "google-dns",
         "address": "tls://8.8.8.8",
         "detour": "优选节点"
       },
       {
-        "tag": "local",
+        "tag": "local-dns",
         "address": "udp://223.5.5.5",
         "detour": "direct"
       },
       {
-        "tag": "block",
+        "tag": "block-dns",
         "address": "rcode://success"
       }
     ],
     "rules": [
       {
         "outbound": "any",
-        "server": "local"
+        "server": "local-dns"
       },
       {
         "rule_set": ["geosite-cn"],
-        "server": "local"
+        "server": "local-dns"
       },
       {
         "rule_set": ["geosite-gfw"],
-        "server": "google"
+        "server": "google-dns"
       }
     ],
-    "final": "google",
+    "final": "google-dns",
     "strategy": "ipv4_only"
   },
   "inbounds": [
