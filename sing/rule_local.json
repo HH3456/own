@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "//": "--- 本地服务、PT站、NAS及运营商 ---",
+      "domain_suffix": [
+        "34563456.eu.org",
+        "44224422.xyz",
+        "hdarea.club",
+        "open.cd",
+        "52pt.site",
+        "eastgame.org",
+        "et8.org",
+        "totheglory.im",
+        "soulvoice.club",
+        "btschool.club",
+        "hmxz.org",
+        "leijing1.com",
+        "ctc.com",
+        "gdtel.com",
+        "chinatelecom.cn"
+      ]
+    },
+    {
+      "//": "--- 小米智能家居 ---",
+      "domain": [
+        "core.api.mijia.tech"
+      ]
+    },
+    {
+      "//": "--- 微软 (中国/直连优化) ---",
+      "domain_suffix": [
+        "microsoft.com",
+        "windowsupdate.com",
+        "outlook.com",
+        "s-microsoft.com",
+        "azure.cn",
+        "office.com",
+        "office365.com",
+        "bing.com",
+        "xboxlive.com"
+      ]
+    },
+    {
+      "//": "--- Apple (CDN与中国服务) ---",
+      "domain_suffix": [
+        "apple.com",
+        "apple.com.cn",
+        "icloud.com",
+        "icloud.com.cn",
+        "mzstatic.com",
+        "aaplimg.com",
+        "cdn-apple.com"
+      ]
+    },
+    {
+      "//": "--- Google (仅限中国可用部分) ---",
+      "domain_suffix": [
+        "google.cn",
+        "265.com"
+      ]
+    },
+    {
+      "//": "--- FCM 推送 (MTalk) ---",
+      "//": "注意：如果您的网络环境无法直连谷歌IP，这部分可能导致推送超时",
+      "domain": [
+        "mtalk.google.com",
+        "alt1-mtalk.google.com",
+        "alt2-mtalk.google.com",
+        "alt3-mtalk.google.com",
+        "alt4-mtalk.google.com",
+        "alt5-mtalk.google.com",
+        "alt6-mtalk.google.com",
+        "alt7-mtalk.google.com",
+        "alt8-mtalk.google.com"
+      ]
+    },
+    {
+      "//": "--- GOTV / IPTV 直播源 ---",
+      "domain_suffix": [
+        "d-net.tw",
+        "tvrohd.cc",
+        "hevciptv.com"
+      ]
+    },
+    {
+      "//": "--- 网络测试工具 (IPCheck) ---",
+      "domain": [
+        "4.ipcheck.ing",
+        "6.ipcheck.ing",
+        "ptest-1.ipcheck.ing",
+        "ptest-2.ipcheck.ing",
+        "ptest-3.ipcheck.ing",
+        "ptest-4.ipcheck.ing",
+        "ptest-5.ipcheck.ing",
+        "ptest-6.ipcheck.ing",
+        "ptest-7.ipcheck.ing",
+        "ptest-8.ipcheck.ing"
+      ]
+    }
+  ]
+}
