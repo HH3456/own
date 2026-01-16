@@ -3,17 +3,14 @@
   "rules": [
     {
       "domain_suffix": [
-        // 官方与直播核心
         "formula1.com",
         "f1tv.com",
         "f1-insights.com",
         "formula1.my.site.com",
         
-        // 第三方神级工具 (Multiviewer for F1)
         "multiviewer.app",
         "multiviewer.dev",
 
-        // 主流 F1 英文资讯与技术分析
         "motorsport.com",
         "autosport.com",
         "the-race.com",
@@ -24,11 +21,9 @@
         "gpfans.com",
         "wtf1.com",
         
-        // 权威数据与统计
         "statsf1.com",
         "f1-tempo.com",
         
-        // 知名 F1 摄影与图片库
         "motorsportimages.com"
       ],
       "domain_keyword": [
