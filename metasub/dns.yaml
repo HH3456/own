@@ -1,47 +1,88 @@
 mode: Rule
 log-level: info
 
-geox-url:
-  geoip: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
-  geosite: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
-
 hosts:
-  dns.alidns.com: [223.5.5.5, 223.6.6.6]
-  doh.pub: [1.12.12.12, 1.12.12.21, 120.53.53.53]
-  dns.google: [8.8.8.8, 8.8.4.4]
-  cloudflare-dns.com: [1.1.1.1, 1.0.0.1]
+  'dns.alidns.com': [223.5.5.5, 223.6.6.6, '2400:3200::1', '2400:3200:baba::1']
+  'doh.pub': [1.12.12.12, 120.53.53.53, '2402:4e00::']
+  'dns.google': [8.8.8.8, 8.8.4.4, '2001:4860:4860::8888', '2001:4860:4860::8844']
+  'cloudflare-dns.com': [1.1.1.1, 1.0.0.1, '2606:4700:4700::1111', '2606:4700:4700::1001']
 
 
 dns:
   enable: true
-  ipv6: false
-  listen: 0.0.0.0:1053
-  fake-ip-range: 28.0.0.1/8
-  enhanced-mode: redir-host
-  fake-ip-filter: ['+.*']
+  listen: :1053
+  ipv6: true
+  
+  # 模式调整为 fake-ip，速度更快
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  
+  # 必须开启，确保 DNS 遵循规则
   respect-rules: true
+  prefer-h3: true
+  fast-query: true
+  
+  # 默认 DNS (兜底)
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  
+  # 常规 DNS 池
   nameserver:
-    - https://dns.google/dns-query
-    - https://cloudflare-dns.com/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  
+  # 代理 DNS 池
   proxy-server-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  direct-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  nameserver-policy:
-    +.formula1.com: https://dns.google/dns-query
-    'geosite:bing':
-      - 8.8.8.8
-      - 1.1.1.1
-    'geosite:cn': 223.5.5.5
+    - https://dns.google/dns-query
+    - https://1.1.1.1/dns-query
 
+  # === 你的核心策略 (完整保留) ===
+  nameserver-policy:
+    # 1. 特定电信业务域名，指定走特定 IP 解析
+    "+.ctc.com,+.gdtel.com,+.chinatelecom.cn":
+      - 132.121.218.164
+      
+    # 2. 广告规则集，直接返回成功状态码 (屏蔽)
+    "rule-set:category-ads-all": rcode://success
+    
+    # 3. 国内/直连规则集 -> 走国内 DNS
+    "rule-set:cn,local,google_cn,microsoft_cn,microsoft_domain,xiaomi_domain":
+      - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+      
+    # 4. 国外/被墙/AI/F1规则集 -> 走国外 DNS
+    "rule-set:gfw,google_domain,ai,github_domain,f1,docker_domain":
+      - https://dns.google/dns-query
+      - https://1.1.1.1/dns-query
+
+  # Fake-IP 过滤 (保留了你的原条目，并补充了防断连的条目)
+  fake-ip-filter:
+    - '+.lan'
+    - '+.local'
+    - 'rule-set:local'
+    - 'rule-set:ai'
+    - 'rule-set:cn'
+    - 'rule-set:apple_domain'
+    - 'rule-set:google_cn'
+    - 'rule-set:xiaomi_domain'
+    # Windows 连通性探测 (防止显示无网络)
+    - '+.msftncsi.com'
+    - 'msftconnecttest.com'
+    # 补充：STUN/NTP 等需要真实 IP 的服务
+    - "+.stun.*.*"
+    - "+.stun.*"
+    - "+.ntp.org"
 
 sniffer:
   enable: true
+  # 开启这两项可增强域名还原能力
   force-dns-mapping: true
   parse-pure-ip: true
+  # 关键：覆盖目标地址
   override-destination: true
+  
   sniff:
     HTTP:
       ports: [80, 8080-8880]
@@ -50,11 +91,13 @@ sniffer:
       ports: [443, 8443]
     QUIC:
       ports: [443, 8443]
-  force-domain:
-    - "+.google.com"
-    - "+.formula1.com"
-    - "geosite:jd"
-    - "geosite:category-bank-cn"
+      
+  # 这里的列表保留你原本的配置
   skip-domain:
-    - "*.lan"
-    - "*.local"
+    - "geosite:cn"
+    - "+.apple.com"
+    - "+.baidu.com"
+    - "imap.189.cn"
+    - "Mijia Cloud"
+  skip-dst-address:
+    - "geoip:cn"
