@@ -1,0 +1,90 @@
+[custom]
+
+; ==============================
+; 策略组 (Proxy Groups)
+; ==============================
+
+; 1. 基础与筛选组
+; 筛选包含 "thanksgod" 的节点
+custom_proxy_group=🙏 单纯的上帝`select`.*`(?i)thanksgod
+; 筛选所有美国节点
+custom_proxy_group=🇺🇸 美国节点`select`.*`(?i)美|BWG|DC1|us|unitedstates|united states
+; 包含所有节点
+custom_proxy_group=🌐 全部节点`select`.*
+
+; 2. 自动与负载均衡 (US)
+; 美国负载均衡 (排除港台日韩新)
+custom_proxy_group=⚖️ 美国平衡`load-balance`.*`http://www.gstatic.com/generate_204`300,,100`sticky-sessions`(?=.*(美|BWG|DC1|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$
+; 美国自动测速 (排除港台日韩新)
+custom_proxy_group=♻️ 美国自动`url-test`.*`http://www.gstatic.com/generate_204`300,,50`(?=.*(美|BWG|DC1|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$
+; 全球自动测速
+custom_proxy_group=♻️ 自动选择`url-test`.*`http://www.gstatic.com/generate_204`300,,50
+
+; 3. 功能策略组 (引用上面的基础组)
+; DNS 分组
+custom_proxy_group=🔍️ DNS`select`[]🙏 单纯的上帝`[]♻️ 自动选择`[]♻️ 美国自动`[]🌐 全部节点`[]DIRECT
+
+; F1 分组
+custom_proxy_group=🏎️ F1方程式`select`[]🙏 单纯的上帝`[]⚖️ 美国平衡`[]♻️ 美国自动`[]♻️ 自动选择`[]🇺🇸 美国节点`[]🌐 全部节点`[]DIRECT
+
+; AI 分组 (优先“单纯的上帝”，并筛选所有美国节点)
+custom_proxy_group=🧠 AI`select`[]🙏 单纯的上帝`(?i)美|BWG|DC1|us|unitedstates|united states
+
+; 默认代理 (常规流量)
+custom_proxy_group=🚀 默认代理`select`[]🙏 单纯的上帝`[]⚖️ 美国平衡`[]♻️ 美国自动`[]♻️ 自动选择`[]🇺🇸 美国节点`[]🌐 全部节点`[]DIRECT
+
+; 漏网之鱼 (兜底)
+custom_proxy_group=🐟 漏网之鱼`select`[]🙏 单纯的上帝`[]DIRECT`[]🚀 默认代理
+
+
+; ==============================
+; 规则集 (Rulesets)
+; 注：保留了 4422 加速链接以确保速度和自定义列表的准确性
+; ==============================
+
+; 1. 拦截类
+ruleset=REJECT,http://subcon.44224422.xyz:5547/https://raw.githubusercontent.com/HH3456/own/main/metasub/rule_reject.list
+ruleset=REJECT,[]GEOSITE,category-ads-all
+ruleset=REJECT,domain,imap.189.cn
+
+; 2. 直连类 (LAN/Local/Private)
+ruleset=DIRECT,http://subcon.44224422.xyz:5547/https://raw.githubusercontent.com/HH3456/own/main/metasub/rule_lan.list
+ruleset=DIRECT,http://subcon.44224422.xyz:5547/https://raw.githubusercontent.com/HH3456/own/main/metasub/rule_local.list
+ruleset=DIRECT,[]GEOSITE,private
+
+; 3. 特定服务优化 (Apple/CN直连)
+ruleset=DIRECT,[]GEOSITE,apple
+ruleset=DIRECT,[]GEOSITE,apple@cn
+ruleset=DIRECT,[]GEOSITE,google@cn
+ruleset=DIRECT,[]GEOSITE,microsoft@cn
+ruleset=DIRECT,[]GEOIP,apple,no-resolve
+
+; 4. 功能分流 (DNS/F1/AI)
+ruleset=🔍️ DNS,http://subcon.44224422.xyz:5547/https://raw.githubusercontent.com/HH3456/own/main/metasub/rule_dns.list
+ruleset=🏎️ F1方程式,http://subcon.44224422.xyz:5547/https://raw.githubusercontent.com/HH3456/own/main/metasub/rule_f1.list
+ruleset=🧠 AI,[]GEOSITE,category-ai-!cn
+
+; 5. 常用服务代理 (Microsoft/GitHub/Docker/Python/Spotify)
+ruleset=🚀 默认代理,[]GEOSITE,microsoft
+ruleset=🚀 默认代理,[]GEOSITE,github
+ruleset=🚀 默认代理,[]GEOSITE,docker
+ruleset=🚀 默认代理,[]GEOSITE,python
+ruleset=🚀 默认代理,[]GEOSITE,spotify
+
+; 6. 谷歌与 GFW (代理)
+ruleset=🚀 默认代理,[]GEOSITE,google
+ruleset=🚀 默认代理,[]GEOIP,google,no-resolve
+ruleset=🚀 默认代理,[]GEOIP,telegram,no-resolve
+ruleset=🚀 默认代理,[]GEOSITE,gfw
+
+; 7. 国内直连
+ruleset=DIRECT,[]GEOSITE,cn
+ruleset=DIRECT,[]GEOIP,cn
+
+; 8. 兜底
+ruleset=🐟 漏网之鱼,[]FINAL
+
+enable_rule_generator=true
+overwrite_original_rules=true
+clash_rule_base= https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/fakeip.yml
+#/base/x.yml
