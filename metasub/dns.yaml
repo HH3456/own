@@ -30,8 +30,6 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver-policy:
-    +.gdtel.com: 132.121.218.164
-    +.ctc.com: 132.121.218.164
     +.formula1.com: https://dns.google/dns-query
     'geosite:bing':
       - 8.8.8.8
