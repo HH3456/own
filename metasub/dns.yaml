@@ -65,8 +65,7 @@ dns:
   fake-ip-filter:
     - '+.lan'
     - '+.local'
-    - 'rule-set:local'
-    - 'rule-set:ai'
+    - 'geosites:category-ai-!cn'
     - 'geosite:cn'
     - 'geosite:apple'
     - 'geosite:google@cn'
