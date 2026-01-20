@@ -86,5 +86,5 @@ ruleset=🐟 漏网之鱼,[]FINAL
 
 enable_rule_generator=true
 overwrite_original_rules=true
-clash_rule_base= https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/fakeip.yml
+clash_rule_base= https://raw.githubusercontent.com/HH3456/own/refs/heads/main/metasub/dns.yaml
 #/base/x.yml
