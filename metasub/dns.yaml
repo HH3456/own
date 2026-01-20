@@ -52,12 +52,12 @@ dns:
     "geosite:category-ads-all": rcode://success
     
     # 3. 国内/直连规则集 -> 走国内 DNS
-    "rule-set:cn,local,google_cn,microsoft_cn,microsoft_domain,xiaomi_domain":
+    "geosite:cn,local,google@cn,microsoft@cn,microsoft,xiaomi":
       - https://dns.alidns.com/dns-query
       - https://doh.pub/dns-query
       
     # 4. 国外/被墙/AI/F1规则集 -> 走国外 DNS
-    "rule-set:gfw,google_domain,ai,github_domain,f1,docker_domain":
+    "geosite:gfw,google,category-ai-!cn,github,docker":
       - https://dns.google/dns-query
       - https://1.1.1.1/dns-query
 
