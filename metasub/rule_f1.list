@@ -1,14 +1,54 @@
-#F1TV相关域名
-#DOMAIN-SUFFIX,nr-data.net
+# =========================================
+# F1 官方及周边主域名
+# =========================================
 DOMAIN-SUFFIX,formula1.com
-#DOMAIN-SUFFIX,newrelic.com
-#DOMAIN-SUFFIX,igodigital.com
-#DOMAIN-SUFFIX,marketingcloudapis.com
-#DOMAIN-SUFFIX,privacy-mgmt.com
-#DOMAIN-SUFFIX,report-uri.com
-#DOMAIN-SUFFIX,bitmovin.com
-#DOMAIN-SUFFIX,doubleclick.net
-#DOMAIN-SUFFIX,akamaized.net
-#DOMAIN-SUFFIX,cloudfront.net
-# F1第三方数据看板
-DOMAIN-SUFFIX,f1-dash.com
+DOMAIN-SUFFIX,f1.com
+DOMAIN-SUFFIX,f1tv.com
+DOMAIN-SUFFIX,f1esports.com
+DOMAIN-SUFFIX,f1experiences.com
+DOMAIN-SUFFIX,f1manager.com
+DOMAIN-SUFFIX,f1play.com
+
+# =========================================
+# F1TV 登录、认证与 API 通信
+# =========================================
+DOMAIN-SUFFIX,api.formula1.com
+DOMAIN-SUFFIX,f1tv-api.formula1.com
+DOMAIN-SUFFIX,f1tv-auth.formula1.com
+DOMAIN-SUFFIX,cognito-idp.us-east-1.amazonaws.com  
+
+# =========================================
+# F1TV 视频流媒体 CDN 分发 (核心直播流与清单)
+# =========================================
+# Akamai 节点
+DOMAIN-SUFFIX,f1prostreaming.akamaized.net
+# Footprint 节点 (最新补充)
+DOMAIN-SUFFIX,f1tv.secure.footprint.net
+DOMAIN-SUFFIX,f1tv-cdn-cent-live.formula1.com.c.footprint.net
+DOMAIN-SUFFIX,f1tv-cdn-cent-east.formula1.com.c.footprint.net
+DOMAIN-SUFFIX,f1tv-cdn-cent-west.formula1.com.c.footprint.net
+# 实时流索引与控制协议 (核心补充)
+DOMAIN-KEYWORD,f1-dash
+DOMAIN-KEYWORD,f1-hls
+DOMAIN-KEYWORD,f1prostreaming
+DOMAIN-KEYWORD,f1-pro-live
+
+# =========================================
+# 第三方最强多屏看板：MultiViewer for F1
+# =========================================
+DOMAIN-SUFFIX,multiviewer.app
+DOMAIN-SUFFIX,muvi.gg
+DOMAIN-KEYWORD,multiviewer
+
+# =========================================
+# 赛事数据统计、遥测周边与 LiveData
+# =========================================
+DOMAIN-SUFFIX,f1tv-livedata.formula1.com
+DOMAIN-SUFFIX,ergast.com
+DOMAIN-SUFFIX,openf1.org
+
+# =========================================
+# 关键字模糊兜底 (防止新增加的二级域名漏网)
+# =========================================
+DOMAIN-KEYWORD,f1tv
+DOMAIN-KEYWORD,formula1
