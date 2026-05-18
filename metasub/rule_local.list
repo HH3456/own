@@ -1,39 +1,37 @@
-
-# 本地服务清单
-DOMAIN-SUFFIX,34563456.eu.org
-DOMAIN-SUFFIX,606404.xyz
-DOMAIN-SUFFIX,44224422.xyz
-DOMAIN-SUFFIX,hdarea.club
-DOMAIN-SUFFIX,open.cd
-DOMAIN-SUFFIX,52pt.site
-DOMAIN-SUFFIX,eastgame.org
-DOMAIN-SUFFIX,et8.org
-DOMAIN-SUFFIX,totheglory.im
-DOMAIN-SUFFIX,soulvoice.club
-DOMAIN-SUFFIX,btschool.club
-DOMAIN-SUFFIX,hmxz.org
-DOMAIN-SUFFIX,leijing1.com
-DOMAIN-SUFFIX,ctc.com
-DOMAIN-SUFFIX,gdtel.com
-DOMAIN-SUFFIX,chinatelecom.cn
-DOMAIN-SUFFIX,jd.com
+# 本地服务清单 (使用纯域名格式)
++.34563456.eu.org
++.606404.xyz
++.44224422.xyz
++.hdarea.club
++.open.cd
++.52pt.site
++.eastgame.org
++.et8.org
++.totheglory.im
++.soulvoice.club
++.btschool.club
++.hmxz.org
++.leijing1.com
++.ctc.com
++.gdtel.com
++.chinatelecom.cn
++.jd.com
 
 # IP Testing
-DOMAIN,4.ipcheck.ing
-DOMAIN,6.ipcheck.ing
+4.ipcheck.ing
+6.ipcheck.ing
 
 # Rule Testing
-DOMAIN,ptest-1.ipcheck.ing
-DOMAIN,ptest-2.ipcheck.ing
-DOMAIN,ptest-3.ipcheck.ing
-DOMAIN,ptest-4.ipcheck.ing
-DOMAIN,ptest-5.ipcheck.ing
-DOMAIN,ptest-6.ipcheck.ing
-DOMAIN,ptest-7.ipcheck.ing
-DOMAIN,ptest-8.ipcheck.ing
+ptest-1.ipcheck.ing
+ptest-2.ipcheck.ing
+ptest-3.ipcheck.ing
+ptest-4.ipcheck.ing
+ptest-5.ipcheck.ing
+ptest-6.ipcheck.ing
+ptest-7.ipcheck.ing
+ptest-8.ipcheck.ing
 
 # 以下是gotv抓包的IP和域名
-DOMAIN-SUFFIX,d-net.tw
-DOMAIN-SUFFIX,tvrohd.cc
-DOMAIN-SUFFIX,hevciptv.com
-
++.d-net.tw
++.tvrohd.cc
++.hevciptv.com
