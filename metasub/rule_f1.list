@@ -1,28 +1,31 @@
-DOMAIN-SUFFIX,formula1.com
+# =========================================
+# F1 官方及核心流媒体 (基于高权重关键字兜底)
+# =========================================
+DOMAIN-KEYWORD,formula1
+DOMAIN-KEYWORD,f1tv
+DOMAIN-KEYWORD,f1prostreaming
+DOMAIN-KEYWORD,f1-pro-live
+DOMAIN-KEYWORD,f1-dash
+DOMAIN-KEYWORD,f1-hls
+
+# =========================================
+# 官方周边子站及认证服务 (精准后缀匹配)
+# =========================================
 DOMAIN-SUFFIX,f1.com
-DOMAIN-SUFFIX,f1tv.com
 DOMAIN-SUFFIX,f1esports.com
 DOMAIN-SUFFIX,f1experiences.com
 DOMAIN-SUFFIX,f1manager.com
 DOMAIN-SUFFIX,f1play.com
-DOMAIN-SUFFIX,api.formula1.com
-DOMAIN-SUFFIX,f1tv-api.formula1.com
-DOMAIN-SUFFIX,f1tv-auth.formula1.com
-DOMAIN-SUFFIX,cognito-idp.us-east-1.amazonaws.com  
-DOMAIN-SUFFIX,f1prostreaming.akamaized.net
-DOMAIN-SUFFIX,f1tv.secure.footprint.net
-DOMAIN-SUFFIX,f1tv-cdn-cent-live.formula1.com.c.footprint.net
-DOMAIN-SUFFIX,f1tv-cdn-cent-east.formula1.com.c.footprint.net
-DOMAIN-SUFFIX,f1tv-cdn-cent-west.formula1.com.c.footprint.net
-DOMAIN-KEYWORD,f1-dash
-DOMAIN-KEYWORD,f1-hls
-DOMAIN-KEYWORD,f1prostreaming
-DOMAIN-KEYWORD,f1-pro-live
-DOMAIN-SUFFIX,multiviewer.app
-DOMAIN-SUFFIX,muvi.gg
+DOMAIN-SUFFIX,cognito-idp.us-east-1.amazonaws.com
+
+# =========================================
+# 第三方看板 (MultiViewer)
+# =========================================
 DOMAIN-KEYWORD,multiviewer
-DOMAIN-SUFFIX,f1tv-livedata.formula1.com
+DOMAIN-SUFFIX,muvi.gg
+
+# =========================================
+# 赛事数据统计周边
+# =========================================
 DOMAIN-SUFFIX,ergast.com
 DOMAIN-SUFFIX,openf1.org
-DOMAIN-KEYWORD,f1tv
-DOMAIN-KEYWORD,formula1
