@@ -16,6 +16,14 @@ IP-CIDR6,fc00::/7,no-resolve
 IP-CIDR6,fe80::/10,no-resolve
 IP-CIDR6,fd00::/8,no-resolve
 
+#TV数据源
+IP-CIDR,23.237.231.0/24,no-resolve
+IP-CIDR,64.62.198.0/24,no-resolve
+IP-CIDR,183.197.0.0/16,no-resolve
+IP-CIDR,183.198.0.0/16,no-resolve
+IP-CIDR,92.222.172.0/24,no-resolve
+
+
 #以下不使用proxy
 SRC-IP-CIDR,192.168.70.200/32
 SRC-IP-CIDR,192.168.70.201/32
