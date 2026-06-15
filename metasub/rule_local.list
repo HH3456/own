@@ -21,16 +21,6 @@
 4.ipcheck.ing
 6.ipcheck.ing
 
-# Rule Testing
-ptest-1.ipcheck.ing
-ptest-2.ipcheck.ing
-ptest-3.ipcheck.ing
-ptest-4.ipcheck.ing
-ptest-5.ipcheck.ing
-ptest-6.ipcheck.ing
-ptest-7.ipcheck.ing
-ptest-8.ipcheck.ing
-
 # 以下是gotv抓包的IP和域名
 +.d-net.tw
 +.tvrohd.cc
